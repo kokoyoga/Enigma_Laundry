@@ -10,11 +10,8 @@ import {
 } from "@heroui/react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Result } from "postcss";
 
 function TransactionsPage() {
-  const [transactionCountMapping, setTransactionCountMapping] = useState({});
-
   const [customerList, setCustomerList] = useState([]);
   const [transactionList, setTransactionList] = useState([]);
 
