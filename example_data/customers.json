@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "code": "LDR001"
+    },
+    {
+        "id": 2,
+        "name": "Jane Doe",
+        "code": "LDR002"
+    },
+    {
+        "id": 3,
+        "name": "John Smith",
+        "code": "LDR003"
+    },
+    {
+        "id": 4,
+        "name": "Jane Smith",
+        "code": "LDR004"
+    },
+    {
+        "id": 5,
+        "name": "John Doe",
+        "code": "LDR005"
+    }
+]

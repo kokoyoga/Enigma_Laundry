@@ -1,0 +1,114 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Promo akhir bulan",
+      "price": 6000
+    },
+    {
+      "id": 2,
+      "name": "Ekonomis",
+      "price": 8000
+    },
+    {
+      "id": 3,
+      "name": "Hemat",
+      "price": 10000
+    },
+    {
+      "id": 4,
+      "name": "Mewah",
+      "price": 12000
+    },
+    {
+      "id": 5,
+      "name": "Super Mewah",
+      "price": 15000
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "code": "LDR001"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "code": "LDR002"
+    },
+    {
+      "id": 3,
+      "name": "John Smith",
+      "code": "LDR003"
+    },
+    {
+      "id": 4,
+      "name": "Jane Smith",
+      "code": "LDR004"
+    },
+    {
+      "id": 5,
+      "name": "John Doe",
+      "code": "LDR005"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "code": "TRX001",
+      "product_id": 1,
+      "customer_id": 1,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "code": "TRX002",
+      "product_id": 2,
+      "customer_id": 2,
+      "quantity": 2
+    },
+    {
+      "id": 3,
+      "code": "TRX003",
+      "product_id": 3,
+      "customer_id": 3,
+      "quantity": 3
+    },
+    {
+      "id": 4,
+      "code": "TRX004",
+      "product_id": 4,
+      "customer_id": 4,
+      "quantity": 4
+    },
+    {
+      "id": 5,
+      "code": "TRX005",
+      "product_id": 5,
+      "customer_id": 5,
+      "quantity": 5
+    },
+    {
+      "id": 6,
+      "code": "TRX006",
+      "product_id": 1,
+      "customer_id": 2,
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "code": "TRX007",
+      "product_id": 2,
+      "customer_id": 2,
+      "quantity": 2
+    },
+    {
+      "id": 8,
+      "code": "TRX008",
+      "product_id": 3,
+      "customer_id": 5,
+      "quantity": 3
+    }
+  ]
+}

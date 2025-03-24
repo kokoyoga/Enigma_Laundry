@@ -1,0 +1,27 @@
+[
+    {
+        "id" : 1,
+        "name" : "Promo akhir bulan",
+        "price" : 6000
+    },
+    {
+        "id" : 2,
+        "name" : "Ekonomis",
+        "price" : 8000
+    },
+    {
+        "id" : 3,
+        "name" : "Hemat",
+        "price" : 10000
+    },
+    {
+        "id" : 4,
+        "name" : "Mewah",
+        "price" : 12000
+    },
+    {
+        "id" : 5,
+        "name" : "Super Mewah",
+        "price" : 15000
+    }
+]
