@@ -1,34 +1,30 @@
-import { useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
-import { Card, CardBody, Button } from "@heroui/react";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  Divider,
+  Input,
+} from "@heroui/react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
-function TransactionDetailPage() {
-  const { customerId } = useParams(); // Get the customerId from the URL
-  const [customer, setCustomer] = useState(null);
-  const [transactions, setTransactions] = useState([]);
+function TransactionsPage() {
+  const { customerId } = useParams();
   const [productsList, setProductsList] = useState([]);
+  const [transactionList, setTransactionList] = useState([]);
+  const [customer, setCustomer] = useState(null);
 
   const getCustomerDetail = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/customer/${customerId}`
+        "http://localhost:3000/customer/${customerId}"
       );
       setCustomer(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const getTransactionsForCustomer = async () => {
-    try {
-      const response = await axios.get(
-        `http://localhost:3000/transactions?customer_id=${customerId}`
-      );
-      setTransactions(response.data);
-    } catch (error) {
-      console.error(error);
+    } catch {
+      console.log(error);
     }
   };
 
@@ -36,6 +32,17 @@ function TransactionDetailPage() {
     try {
       const response = await axios.get("http://localhost:3000/products");
       setProductsList(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const getTransactionList = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:3000/transactions?customer_id=${customerId"
+      );
+      setTransactionList(response.data);
     } catch (error) {
       console.error(error);
     }
@@ -54,19 +61,18 @@ function TransactionDetailPage() {
   };
 
   useEffect(() => {
-    getCustomerDetail();
     getProductsList();
-    getTransactionsForCustomer();
+    getTransactionList();
   }, [customerId]);
 
   return (
     <div className="flex flex-col items-center gap-5 p-5">
       <Navbar />
       <Card className="w-full max-w-4xl mt-5">
+        <h2 className="font-semibold text-center">
+          Detail Transaksi untuk {customer?.name}
+        </h2>
         <CardBody className="flex flex-col items-center gap-4">
-          <h2 className="font-semibold text-center">
-            Detail Transaksi untuk {customer?.name}
-          </h2>
           <div className="flex w-full justify-between items-center p-3 bg-gray-200 rounded-lg mb-3">
             <div className="font-medium w-1/4 text-center">Kode Transaksi</div>
             <div className="font-medium w-1/4 text-center">
@@ -77,7 +83,7 @@ function TransactionDetailPage() {
             <div className="font-medium w-1/4 text-center">Total Bayar</div>
           </div>
 
-          {transactions.map((transactions) => (
+          {transactionList.map((transactions) => (
             <div
               key={transactions.id}
               className="flex w-full justify-between items-center p-3 border-b"
@@ -85,7 +91,7 @@ function TransactionDetailPage() {
               <div className="w-1/4 text-center">{transactions.code}</div>
               <div className="w-1/4 text-center">
                 {transactions.Tanggal_Transaksi}
-              </div>{" "}
+              </div>
               <div className="w-1/4 text-center">
                 {getProductName(transactions.product_id)}
               </div>
@@ -104,4 +110,4 @@ function TransactionDetailPage() {
   );
 }
 
-export default TransactionDetailPage;
+export default TransactionsPage;
