@@ -10,6 +10,7 @@ import {
   DropdownMenu,
   Avatar,
 } from "@heroui/react";
+import ModalForNewTransaction from "./Micro_Components/ModalForNewTransaction";
 
 function NavbarX() {
   return (
@@ -26,9 +27,7 @@ function NavbarX() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Transaksi Baru
-          </Link>
+          <ModalForNewTransaction />
         </NavbarItem>
       </NavbarContent>
 

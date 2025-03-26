@@ -1,6 +1,7 @@
 import CustomerPage from "./Pages/CustomersPage";
 import TransactionsPage from "./Pages/TransactionPage";
 import { Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
