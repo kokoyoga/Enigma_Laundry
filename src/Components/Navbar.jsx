@@ -9,12 +9,13 @@ import {
   Dropdown,
   DropdownMenu,
   Avatar,
+  Button,
 } from "@heroui/react";
 import ModalForNewTransaction from "./Micro_Components/ModalForNewTransaction";
 
 function NavbarX() {
   return (
-    <Navbar>
+    <Navbar className="shadow-">
       <NavbarBrand>
         <img src="./assets/Capture.PNG" alt="" />
         <p className="font-bold text-inherit">Enigma Laundry</p>
@@ -23,7 +24,9 @@ function NavbarX() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="/">
-            Home
+            <Button className="font-semibold" color="transparant">
+              Home
+            </Button>
           </Link>
         </NavbarItem>
         <NavbarItem>

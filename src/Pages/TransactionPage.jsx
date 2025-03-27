@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
-import { Card, CardBody, Button } from "@heroui/react";
+import { Card, CardBody, Button, Link, Chip } from "@heroui/react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -100,6 +100,11 @@ function TransactionDetailPage() {
           ))}
         </CardBody>
       </Card>
+      <div className="">
+        <Link href="/customerPage">
+          <Button>Back</Button>
+        </Link>
+      </div>
     </div>
   );
 }
