@@ -59,64 +59,8 @@
       "code": "TRX001",
       "product_id": 1,
       "customer_id": 1,
-      "quantity": 1,
-      "Tanggal_Transaksi": "28-02-2025"
-    },
-    {
-      "id": "2",
-      "code": "TRX002",
-      "product_id": 2,
-      "customer_id": 2,
-      "quantity": 2,
-      "Tanggal_Transaksi": "28-02-2025"
-    },
-    {
-      "id": "3",
-      "code": "TRX003",
-      "product_id": 3,
-      "customer_id": 3,
-      "quantity": 3,
-      "Tanggal_Transaksi": "28-02-2025"
-    },
-    {
-      "id": "4",
-      "code": "TRX004",
-      "product_id": 4,
-      "customer_id": 4,
-      "quantity": 4,
-      "Tanggal_Transaksi": "28-02-2025"
-    },
-    {
-      "id": "5",
-      "code": "TRX005",
-      "product_id": 5,
-      "customer_id": 5,
       "quantity": 5,
-      "Tanggal_Transaksi": "28-02-2025"
-    },
-    {
-      "id": "6",
-      "code": "TRX006",
-      "product_id": 1,
-      "customer_id": 2,
-      "quantity": 1,
-      "Tanggal_Transaksi": "28-02-2025"
-    },
-    {
-      "id": "7",
-      "code": "TRX007",
-      "product_id": 2,
-      "customer_id": 2,
-      "quantity": 2,
-      "Tanggal_Transaksi": "28-02-2025"
-    },
-    {
-      "id": "8",
-      "code": "TRX008",
-      "product_id": 3,
-      "customer_id": 5,
-      "quantity": 3,
-      "Tanggal_Transaksi": "28-02-2025"
+      "Tanggal_Transaksi": "2025-03-28"
     }
   ]
 }
