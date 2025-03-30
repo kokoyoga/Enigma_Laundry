@@ -210,6 +210,7 @@ function TransactionDetailPage() {
           )}
         </ModalContent>
       </Modal>
+      <h1>Please Reload After Add New Customer and Transaction</h1>
     </div>
   );
 }

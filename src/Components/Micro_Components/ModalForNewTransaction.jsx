@@ -16,7 +16,6 @@ import { nanoid } from "nanoid";
 export default function ModalForNewTransaction() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  // State untuk harga produk, paket yang dipilih, qty, dan total harga
   const [productList, setProductList] = useState([]);
   const [selectedPackageId, setSelectedPackageId] = useState(""); // Menyimpan paket yang dipilih
   const [selectedCustomerId, setSelectedCustomerId] = useState(0);
@@ -64,7 +63,6 @@ export default function ModalForNewTransaction() {
     }
   }
 
-  // fungsi untuk mendapatkan customer list untuk mendapatkan customerId
   const getCustomerList = async () => {
     try {
       const response = await axios.get("http://localhost:3000/customer");
@@ -83,16 +81,14 @@ export default function ModalForNewTransaction() {
     }
   };
 
-  // Fungsi untuk mendapatkan harga produk berdasarkan nama
   const getProductPrice = (productId) => {
     const productPrice = productList.find((el) => el.id === productId);
     if (!productPrice) {
       console.log(productId, productList);
     }
-    return productPrice ? productPrice.price : 0; // Return 0 jika tidak ada harga
+    return productPrice ? productPrice.price : 0;
   };
 
-  // Hook untuk mengambil data produk ketika komponen dimuat
   useEffect(() => {
     getProductList();
     getCustomerList();
@@ -206,11 +202,10 @@ export default function ModalForNewTransaction() {
                   variant="bordered"
                   type="number"
                   value={quantity}
-                  onChange={(e) => setQuantity(parseInt(e.target.value, 10))} // Update quantity
+                  onChange={(e) => setQuantity(parseInt(e.target.value, 10))}
                 />
                 <h2 className="text-center">Total Harga :</h2>
                 <p className="text-center">Rp {price * quantity}</p>
-                {/* Menampilkan total harga */}
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="flat" onPress={onClose}>

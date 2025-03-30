@@ -29,28 +29,8 @@
   "customer": [
     {
       "id": "1",
-      "name": "John Doe",
-      "code": "LDR001"
-    },
-    {
-      "id": "2",
-      "name": "Jane Doe",
-      "code": "LDR002"
-    },
-    {
-      "id": "3",
-      "name": "John Smith",
-      "code": "LDR003"
-    },
-    {
-      "id": "4",
-      "name": "Jane Smith",
-      "code": "LDR004"
-    },
-    {
-      "id": "5",
-      "name": "John Doe",
-      "code": "LDR005"
+      "name": "Koko Yoga Adhitya",
+      "code": "LDRvznBT4"
     }
   ],
   "transactions": [
@@ -59,8 +39,8 @@
       "code": "TRX001",
       "product_id": 1,
       "customer_id": 1,
-      "quantity": 5,
-      "Tanggal_Transaksi": "2025-03-28"
+      "quantity": 4,
+      "Tanggal_Transaksi": "2025-03-30"
     }
   ]
 }
